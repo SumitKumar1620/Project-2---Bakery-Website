@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Website</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+        /* @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap'); */
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Playpen+Sans:wght@100..800&display=swap');
+
+
+
+        :root {
+            --font: "Poppins", Sans-serif;
+            --secondfont: "Baloo Bhai", Sans-serif;
+            --separatorcolor: rgba(132, 0, 255, 0.649);
+            --navBarColor: rgba(232, 224, 224, 0.714);
+            --primaryColor: rgba(137, 43, 226, 0.641);
+            --shadowColor: 0px 0px 20px rgba(255, 255, 255, 0.804);
+            --cakebackground: rgba(255, 255, 255, 0.712);
+            --cakeShadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            --fontSecondary: "Playpen Sans", "cursive", "Poppons", Sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #8d6bac91;
+        }
+
+        .navBar {
+            position: sticky;
+            top: 0px;
+            background-color: aliceblue;
+            text-align: center;
+            background-color: rgb(203, 173, 230);
+            /* height: auto; */
+
+        }
+
+        .navBar ul {
+            padding: 15px;
+        }
+
+        .navBar ul li {
+            display: inline-flex;
+            list-style: none;
+            padding: 20px;
+            font-family: var(--font);
+            font-size: 12pt;
+            color: white;
+        }
+
+        .branding h1 {
+            background-color: var(--primaryColor);
+            text-align: center;
+            /* color: peachpuff; */
+            color: white;
+            font-family: var(--font);
+            text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.886);
+        }
+
+
+        .images {
+            box-sizing: border-box;
+            display: flex;
+            /* margin: 10px 20px; */
+            /* border: 2px solid red; */
+            /* height: 20vw; */
+
+        }
+
+        .images .cakeleft {
+            box-sizing: border-box;
+            margin: 0 auto;
+            background-color: var(--cakebackground);
+            width: 25%;
+            height: fit-content;
+            text-align: center;
+            border-radius: 15px;
+            /* border:2px solid red; */
+
+        }
+
+        .cakeleft:hover {
+            background-color: var(--navBarColor);
+            box-shadow: var(--shadowColor);
+        }
+
+        .images img {
+            /* display: block; */
+            box-sizing: border-box;
+            /* display: inline-block; */
+            border-radius: 15px;
+            height: 90%;
+            width: 90%;
+            margin: 5% 5%;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .images p {
+            font-size: 12pt;
+            font-family: var(--font);
+            padding: 0px 5px;
+            word-wrap: break-word;
+        }
+
+        .images .cakemiddle {
+            margin: 0 auto;
+            width: 25%;
+            height: fit-content;
+            text-align: center;
+            background-color: var(--cakebackground);
+            border-radius: 15px;
+
+        }
+
+        .cakemiddle:hover {
+            background-color: var(--navBarColor);
+            box-shadow: var(--shadowColor);
+        }
+
+        .images .cakeright {
+            margin: 0 auto;
+            width: 25%;
+            height: fit-content;
+            text-align: center;
+            background-color: var(--cakebackground);
+            border-radius: 15px;
+
+        }
+
+        .cakeright:hover {
+            background-color: var(--navBarColor);
+            box-shadow: var(--shadowColor);
+        }
+
+        .images button {
+            margin: 2vw 2vw;
+            margin-bottom: 2vw;
+            padding: 1vw 2vw;
+            background-color: rgba(162, 82, 237, 0.785);
+            color: white;
+            border: none;
+            font-family: var(--font);
+            border-radius: 10px;
+        }
+
+        .images button:hover {
+            box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.83);
+        }
+
+        /* .snapImage {
+            height: 100vh;
+            overflow: hidden;
+
+
+        } */
+
+        .snapImage img {
+            margin-top: 0px;
+            display: block;
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .separator {
+            margin: 2vw 20vw;
+            /* border: 1px solid red; */
+            text-align: center;
+            background-color: var(--separatorcolor);
+            color: white;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.766);
+            border-radius: 15px;
+
+        }
+
+        .separator h2 {
+            font-family: var(--font);
+            padding: 5px;
+        }
+
+        .logo {
+            position: sticky;
+            top: 0px;
+            display: block;
+        }
+
+        .logo img {
+            box-sizing: border-box;
+            height: 94px;
+            float: left;
+            display: flow-root;
+            background-color: white;
+
+        }
+
+        .menu {
+            /* border: 2px solid black; */
+            height: 200px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+        .catalogue {
+            width: 22vw;
+            background-color: var(--cakebackground);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+
+
+        }
+
+        .catalogue img {
+            width: 20vw;
+            height: 15vw;
+            border-radius: 15px;
+            margin: 1vw;
+            margin-bottom: 2vw;
+
+        }
+
+        .catalogue p {
+            font-size: 12pt;
+            font-family: var(--font);
+            padding: 0px 5px;
+            word-wrap: break-word;
+        }
+
+        .catalogue button {
+            margin: 10px 20px;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            background-color: rgba(162, 82, 237, 0.785);
+            color: white;
+            border: none;
+            font-family: var(--font);
+            border-radius: 10px;
+        }
+
+        .catalogue button:hover {
+            box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.83);
+        }
+
+        .catalogue:hover {
+            background-color: var(--navBarColor);
+            box-shadow: var(--shadowColor);
+        }
+
+        .footer {
+            display: flex;
+            /* width:100vw; */
+            background-color: rgb(0, 0, 0);
+            justify-content: space-between;
+            padding: 5vw;
+            font-family: var(--fontSecondary);
+            color: rgba(255, 255, 255, 0.821);
+            box-shadow: 0px -10px 20px rgb(255, 255, 255);
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .footer ul {
+            list-style: none;
+            margin-top: 20px;
+
+        }
+
+        .footer ul li {
+            margin: 5px;
+            margin-bottom: 15px;
+        }
+
+        .footer ul li:hover {
+            text-shadow: 0px 0px 0px rgb(255, 0, 43);
+        }
+
+        .footer h3 {
+            font-size: 20pt;
+            font-weight: normal;
+            text-shadow: 0px 10px 10px rgb(138, 0, 230);
+
+        }
+
+        .footlogo img {
+            width: 10vw;
+            background-color: rgba(255, 255, 255);
+            border-radius: 50px;
+
+        }
+
+        .footlogo img:hover {
+            box-shadow: 10px 10px 20px rgb(138, 0, 230);
+            /* background-color: blue; */
+        }
+
+        .copywrite {
+            /* width: 100vw; */
+            background-color: black;
+            color: rgba(255, 255, 255, 0.821);
+            font-family: var(--fontSecondary);
+            padding: 1vw;
+            text-align: center;
+
+
+        }
+
+        .wrap {
+            width: 100vw;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgba(255, 255, 255, 0.821);
+            /* color: greenyellow; */
+        }
+
+        .icon {
+            position: fixed;
+            z-index: -1;
+            padding-left: 95%;
+            padding-top: 70vh;
+        }
+
+        .icon img {
+            width: 3vw;
+            border-radius: 50%;
+            opacity: 90%;
+
+        }
+
+        .icon img:hover {
+            box-shadow: 0px 0px 20px rgb(138, 0, 230);
+        }
+
+        .copywrite img {
+            width: 3vw;
+        }
+
+        hr {
+            border-color: rgba(98, 97, 97, 0.393);
+        }
+
+        .cart img {
+            position: absolute;
+            width: 20px;
+            right: 5vw;
+        }
+        .search img{
+            position: absolute;
+            width: 20px;
+            right: 9vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="branding">
+        <h1>Welcome to BLISSFULBITE!</h1>
+    </div>
+
+    <div class="icon">
+        <img
+            src="https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo-whatsapp-512.png" />
+        <img
+            src="https://cdn2.iconfinder.com/data/icons/2018-social-media-app-logos/1000/2018_social_media_popular_app_logo_instagram-512.png" />
+        <img src="https://cdn2.iconfinder.com/data/icons/apple-ios7-icons/118/phone_ios7_ios_7.png" />
+    </div>
+
+
+    <div class="navBar">
+        <div class="logo">
+            <img src="https://s.tmimgcdn.com/scr/800x500/192200/bakery-shop-logo-bakery-whisk_192267-original.jpg" alt="logo here" />
+        </div>
+        <ul>
+            <li><a href="#">Ready to Go Cakes</a></li>
+            <li><a href="#">Made to Order Cakes</a></li>
+            <li><a href="#">Special Shape Cakes</a></li>
+            <li><a href="#">Franchise</a></li>
+            <li class="search"><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/search-1511218-1279309.png?f=webp&w=256" /></li>
+            <li class="cart"><img
+                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cart-2693996-2235912.png?f=webp&w=256" />
+            </li>
+        </ul>
+        <!-- <div class="cart">
+            <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/cart-2693996-2235912.png?f=webp&w=256"/>
+        </div> -->
+    </div>
+    <div class="snapImage">
+        <img src="https://images.unsplash.com/photo-1617980695839-8e27c9f7db25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1617980695839-8e27c9f7db25?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="HomeImage" />
+    </div>
+
+    <div class="separator">
+        <h2>Our Best Sellers</h2>
+
+    </div>
+
+
+    <div class="images">
+        <div class="cakeleft">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1989&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Chocolate Cake" />
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi eveniet molestiae iusto.</p>
+            <button>Add to cart</button>
+        </div>
+        <div class="cakemiddle">
+            <img src="https://images.unsplash.com/photo-1583041270514-f2daa9ffc6d7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Disneyland Cake" />
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi eveniet molestiae iusto.</p>
+            <button>Add to cart</button>
+        </div>
+        <div class="cakeright">
+            <img src="https://images.unsplash.com/photo-1605807646983-377bc5a76493?q=80&w=1924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Special Cake" />
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi eveniet molestiae iusto.</p>
+            <button>Add to cart</button>
+        </div>
+    </div>
+
+    <div class="separator">
+        <h2>Explore our amazing range of cakes</h2>
+    </div>
+
+    <div class="menu">
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1635341814284-c0d35d542211?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1673417284575-cb29c8631125?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1618508369765-6099b7207c06?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1534695573066-04fbaace5327?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1618426703263-9b751af305a6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1598293181642-e2f722a90c91?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1620144511939-3981ea285ef9?q=80&w=2068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1580745497986-76cbf3d259da?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1576739658997-4a53d5b49906?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1635341814284-c0d35d542211?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1579356094148-9b74dab60f5b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1673417284575-cb29c8631125?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1568827999250-3f6afff96e66?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?q=80&w=1950&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+
+        <div class="catalogue">
+            <img
+                src="https://images.unsplash.com/photo-1635341814284-c0d35d542211?q=80&w=1951&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D " />
+            <p>
+                Lorem ipsum
+            </p>
+            <button>Add to cart</button>
+
+        </div>
+
+
+        <div class="wrap">
+
+            <div class="footer">
+                <div class="footlogo">
+                    <img src="https://s.tmimgcdn.com/scr/800x500/192200/bakery-shop-logo-bakery-whisk_192267-original.jpg" />
+                </div>
+
+                <div class="company">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="useful">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">CSR</a></li>
+                        <li><a href="#">Refund and Return Policy</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="social">
+                    <h3>Social media</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr />
+            <div class="copywrite">
+                <p>
+                    Copywrite &copy; 2024 BlissfulBite&trade; All rights reserved
+                </p>
+                <img
+                    src="https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo_instagram-512.png" />
+                <img
+                    src="https://cdn3.iconfinder.com/data/icons/2018-social-media-black-and-white-logos/1000/2018_social_media_popular_app_logo-whatsapp-512.png" />
+                <img
+                    src="https://cdn2.iconfinder.com/data/icons/social-media-2151/512/21_Media_social_website_phone-512.png" />
+            </div>
+        </div>
+
+
+</body>
+
+</html>
